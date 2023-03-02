@@ -1,22 +1,31 @@
-button{
-    width: 250px;
-    height: 80px;
-    font-size: 35px;
-    font-family: Roboto, sans-serif;
+.boton-contenedor{
+    height: 83px;
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
+    font-size: 38px;
+    background-color: #1b1b32;
     color: #FFF;
+    margin: 4px;
+    border-radius: 25px;
     border: 2px solid #FFF;
-    border-radius: 15px;
-    margin: 5px;
     cursor: pointer;
+    user-select: none;
+    transition: all 0.35s;
 }
 
-button:hover{
-    background-color: #00471B;
-}
-button.boton-clic{
-    background-color: #002ead;
-}
-button.boton-reiniciar{
+.boton-contenedor:hover{
     background-color: #5a01a7;
+    transition: all 0.35s;
+}
+
+.operador{
+    background-color: #00471b;
+    transition: all 0.35s;
+}
+.operador:hover{
+    background-color: #FF6600;
+    transition: all 0.35s;
 }

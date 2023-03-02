@@ -1,13 +1,16 @@
 import React from 'react';
 import '../stylescheets/Boton.css';
 
-function Boton({ text, esBotonDeClic, manejarClic }){
+function Boton(props){
+    const esOperador = valor =>{
+        return isNaN(valor) && (valor !== '.' && (valor !== '='));
+    };
     return(
-        <button
-            className={ esBotonDeClic ? 'boton-clic' : 'boton-reiniciar' } 
-            onClick={manejarClic} >
-            {text}
-        </button>
+        <div 
+            className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
+            onClick={() =>props.manejarClic(props.children)} >
+            {props.children}
+        </div>
     );
 }
 
